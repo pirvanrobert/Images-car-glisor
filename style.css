@@ -1,0 +1,85 @@
+*{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+.image-1{
+    background-image: url(./Images/Masina-1.jpg);
+}
+.image-2{
+    background-image: url(./Images/Masina-2.jpg);
+}
+.image-3{
+    background-image: url(./Images/Masina-3.jpg);
+}
+.image-4{
+    background-image: url(./Images/Masina-4.jpg);
+}
+.image-5{
+    background-image: url(./Images/Masina-5.jpg);
+}
+
+body{
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(37, 2, 90, 0.659);
+}
+
+.container{
+    width: 1200px;
+    display: flex;
+}
+
+.slide{
+    flex: 1;
+    border-radius: 10px;
+    height: 80vh;
+    margin: 0 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    transition: 0.8s ease-in-out;
+    position: relative;
+}
+
+.slide h3{
+    font-size: 20px;
+    position: absolute;
+    color: rgb(17, 155, 234);
+    bottom: 10px;
+    left: 10px;
+    opacity: 0;
+}
+
+.slide.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out 0.4s;
+}
+
+.active{
+    flex: 10;
+}
+
+.button{
+    width: 12%;
+    border-radius: 10px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-weight: bold;
+    font-size: medium;
+    color: rgba(144, 255, 255, 0.689);
+    background-color: rgb(134, 85, 54);
+    padding: 8px 3px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.slide.active button{
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out 0.4s;
+}
